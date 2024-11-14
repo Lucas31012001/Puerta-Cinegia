@@ -1,0 +1,661 @@
+/** VARIABLES GENERALES **/
+
+:root{
+    --fuentePrincipal: 'Noto Serif', serif;
+
+    --tamanoParrafo: 1.6rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.header{
+    width: 100%;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: var(--tamanoParrafo);
+    background-color: #121a24;
+    color: white;
+    font-style: normal;
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 4em;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    line-height: 100%;
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 1;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.7rem;
+}
+
+p{
+    font-weight: 350;
+    font-size: 1em;
+    line-height: 120%;
+    font-style: normal;
+}
+
+.boton{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: .85em;
+    line-height: 100%;
+    background-color: #fff;
+    color: #121a24;
+    border: 0 solid;
+    height: 36px;
+    display: inline-flex;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.boton:hover {
+    color: #fff; 
+    background-color: #121a24;
+}
+
+/** NAVEGACIÓN **/
+
+.barra{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 100px;
+    position: fixed;
+    width: 100%;     
+    background-color: #121a24; 
+    z-index: 10;     
+    overflow: hidden;
+}
+
+.navegacion{
+    margin: 0 auto 0 0;
+    padding: 0;
+}
+
+.navegacion ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    margin-top: 0;
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.icono{
+    border-radius: 999px;
+    background-color: #fff;
+    border: 0 solid #121a24;
+    width: 150px; 
+    height: 150px;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+.icono img{
+    width: 70%;
+    margin-right: 30px;
+    margin-left: 23px;
+    margin-top: 25px;
+}
+
+.logo img{
+    margin-right: 3rem;
+    filter: invert(1);
+    height: 45px;
+    position: relative;
+    top: -2px;
+}
+
+.barra .ul{
+    display: flex;
+    gap: 5px;
+    margin: 0 20px 0 0;
+}
+
+.barra .ul li{
+    list-style: none;
+}
+
+.lenguajes{
+    margin-right: 20px;
+}
+
+.lenguajes .in{
+    background-image: url(https://mercadopuertacinegia.com/wp-content/themes/cinegia/assets/img/fleg-en.webp);
+}
+
+.lenguajes .es{
+    background-image: url(https://mercadopuertacinegia.com/wp-content/themes/cinegia/assets/img/fleg-es.webp);
+}
+
+.lenguajes .boton{
+    overflow: hidden;
+    text-indent: -999px;
+    border: 1px solid #fff;
+    background-position: center center;
+    background-repeat: no-repeat;  
+    background-size: cover;
+    aspect-ratio: 1;
+    border-radius: 999px;
+    transition: opacity .3s ease-in;
+}
+
+.barra .ul li a{
+    color: #fff;
+    background-color: rgba(255,255,255,.1);
+    width: 46px;
+}
+
+.barra .ul li a i{
+    font-size: 1.5em;
+}
+
+.contenedor-video1 video{
+    width: 100%;
+    height: 100%;
+    width: 800;
+    height: 600;
+}
+
+.contenido-principal{
+    padding: 100px;
+    background: #2c3f45;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    min-height: calc(100vh - 44px);
+    gap: 2rem;
+}
+
+/** INTRO **/
+
+.intro{
+    background: #121a24;
+    overflow: hidden;
+    position: sticky;
+    top: 64px;
+    margin: 0;
+}
+
+.intro .video{
+    border: 0 solid #121a24;
+    padding: 50px;
+    justify-content: center;
+    align-items: flex-end;
+    height: calc(100vh - 100px);
+    position: relative;
+    display: flex;
+}
+
+.intro .video video{
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/** MERCADO **/
+
+.mercado{
+    padding: 100px;
+    background: #2c3f45;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    position: relative;
+    top: 64px;
+    min-height: calc(100vh - 44px);
+    overflow: hidden;
+    border-top: 0 solid #c78c26;
+    border-bottom: 0 solid #c78c26;
+    margin: 0;
+}
+
+.mercado .txt{
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.supertitle{
+    font-size: 4em;
+    font-weight: 200;
+    margin: 0 0 .2em 0;
+}
+
+.txt p{
+    font-size: 2em;
+    margin: 1em 0 0 0;
+    font-weight: 200;
+}
+
+.mercado .deco{
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    left: 33%;
+    mask-image: linear-gradient(to right, transparent 5%, #000 75%);
+    filter: grayscale(100%);
+    mix-blend-mode: luminosity;
+    opacity: .5;
+}
+
+.mercado .deco video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/** ESPACIOS **/
+
+.espacios{
+    padding: 100px;
+    background: #121a24;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.header h2{
+    margin: 0 0 .2em 0;
+}
+
+.header p{
+    margin: 1em 0 0 0;
+}
+
+section .header{
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.espacios .block .txt h2{
+    padding-right: 50px;
+    margin: 0 0 .2em 0;
+    text-align: left;
+}
+
+.espacios .block .txt p {
+    border-left: 0 solid #121a24;
+    padding: 5px 0 5px 10px;
+    font-size: .8em;
+    margin: 1em 0 0 0;
+    font-weight: 350;
+}
+
+.espacios .block{
+    display: grid;
+    background-color: #e4c5ae; 
+    grid-template-columns: 2fr 1fr;
+    color: #121a24;
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.espacios .block .txt {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    padding: 50px;
+    align-items: center;
+}
+
+.espacios .block .imagen {
+    background: url(https://mercadopuertacinegia.com/wp-content/themes/cinegia/assets/img/map.webp) center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.espacios .block .boton{
+    height: 60px;
+    padding: 0 20px;
+    font-size: 1em;
+}
+
+.espacios .block .imagen .boton i{
+    font-size: 1.5em;
+}
+
+/** DESCUBRIR **/
+
+.descubrir{
+    position: sticky;
+    top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 66vw;
+    padding: 100px 0 100px 100px;
+    overflow: hidden;
+    background-color: #e4c5ae;
+}
+
+.descubrir1{
+    color: #121a24;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.descubrir1 h2{
+    font-size: 1.8em;
+    margin: 0 0 .2em 0;
+    text-align: left;
+}
+
+.prev-slide,
+.next-slide{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: .85em;
+    line-height: 100%;
+    background-color: #fff;
+    color: #121a24;
+    border: 0 solid;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color .3s ease-out, background-color .3s ease-out, border-color .3s ease-out;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto; 
+    max-width: 400px; 
+    margin-right: 20px; 
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    object-fit: cover;
+    width: 100%;
+    width: 400px;
+    max-height: 200px;
+    height: auto;
+}
+
+.swiper-slide .txt h2{
+    font-size: 1em;
+    line-height: 100%;
+    margin: 0 0 .2em 0;
+    padding: 20px;
+    color: #000;
+}
+
+/** FOODHALL **/
+
+.foodhall{
+    position: relative;
+    z-index: 1;
+    padding: 100px;
+    background-color: #2c3f45;
+}
+
+.foodhall-2 h2{
+    margin: 0 0 .2em 0;
+    text-align: center;
+}
+
+/** FAQS **/
+
+.preguntas{
+    position: relative;
+    z-index: 1;
+    padding: 100px;
+    background: #121a24;
+}
+
+.preguntas-header{
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.preguntas-header h2{
+    margin: 0 0 .2em 0;
+}
+
+.faqs{
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #e4c5ae;
+    padding: 0 0 20px 0;
+}
+
+.pregunta{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: color .3s ease-in-out;
+    border-top: 1px dashed #e4c5ae;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.pregunta i{
+    color: #c78c26;
+    transition: transform .3s ease-in-out;
+}
+
+.pregunta i::before {
+    content: "\e59e"; 
+    font-family: "Font Awesome 6 Free";
+}
+
+.pregunta:hover{
+    color: #e4c5ae;
+}
+
+.pregunta.activa i {
+    transform: rotate(45deg);
+}
+
+.pregunta p{
+    margin: 0;
+}
+
+.respuesta{
+    display: none;
+    font-size: .8em;
+    margin: 0;
+    padding-top: 1em;
+}
+
+.respuesta.activa{
+    display: block;
+}
+
+.respuesta p{
+    margin: 0;
+}
+
+/** EMPLEO **/
+
+.empleo{
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    position: relative;
+    overflow: hidden;
+    color: #121a24;
+    width: 100%;
+    border-top: 0 solid #c78c26;
+    border-bottom: 0 solid #c78c26;
+    min-height: calc(50vh - 44px);
+    background-color: #e4c5ae;
+}
+
+.empleo1{
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.empleo1 h2{
+    font-size: 4em;
+    font-weight: 200;
+    line-height: 100%;
+    margin: 0 0 .2em 0;
+}
+
+.empleo1 p{
+    font-size: 2em;
+    font-weight: 200;
+    margin: 0;
+}
+
+.empleo2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.empleo2 .boton{
+    height: 60px;
+    padding: 0 20px;
+    font-size: 1em;
+}
+
+.empleo2 a i{
+    font-size: 1.5em;
+}
+
+.empleo .deco{
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    left: 33%;
+    background: url(https://mercadopuertacinegia.com/wp-content/themes/cinegia/assets/img/bckg-mercado.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: linear-gradient(to right, transparent 5%, #000 75%);
+    filter: grayscale(100%);
+    mix-blend-mode: luminosity;
+    opacity: .5;
+}
+
+/** FOOTER **/
+
+footer{
+    z-index: 1;
+    background: #2c3f45;
+    color: #fff;
+    gap: 50px;
+    padding: 20px 100px;
+    display: flex;
+    position: relative;
+    margin: 0;
+}
+
+.redes{
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.redes a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.8em;
+    color:#fff;
+}
+
+.calendario{
+    font-size: .7em;
+    line-height: 160%;
+}
+
+.botones a i{
+    font-size: 1.5em;
+}
+
+.botones{
+    margin-left: auto;
+}
+
+.copy{
+    font-size: .65em;
+    line-height: 130%;
+}
+
+.copy a{
+    color: #fff;
+}
+
